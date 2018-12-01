@@ -29,7 +29,7 @@ def find_Target(img_name):
    masked = cv2.bitwise_not(masked)
 
    circles = cv2.HoughCircles(masked,cv2.HOUGH_GRADIENT,2.0,masked.shape[0]/2,
-                               param1=100,param2=10,minRadius=0,maxRadius=70)
+                               param1=100,param2=10,minRadius=0,maxRadius=30)
    #TODO: either have radius change based on elevation of drone or look for concentric circles instead
 
    # return empty list if no POI found
